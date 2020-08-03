@@ -45,3 +45,5 @@ Once you execute this code the first Table `Maroc` will be refilled with all the
 feel free to create a [new issue HERE](https://github.com/Anass-ABEA/Covid-19-Database-Updater/issues) and i'll fix it ASAP.
 
 **NOTE:** feel free to change the code of `MainActivity.java` and share with me your results.
+
+**PS:**  Data is retreived from trusted sources [LINK TO THE SITE](http://www.geomatic.ma/fr/)
