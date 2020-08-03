@@ -43,6 +43,7 @@ public class MainActivity {
             System.out.println("******************************");
             System.out.println("***ERROR DETECETED***");
             System.out.println("******************************\n");
+            e.printStackTrace();
             System.out.println(e.toString());
             System.out.println("\n******************************");
             System.out.println("********END ERROR********");
@@ -77,22 +78,22 @@ public class MainActivity {
 
     //connect to database
     private static Connection connectToDatabase() throws SQLException  {
-        return DriverManager.getConnection("jdbc:mysql://localhost/Covid?serverTimezone=UTC", "root", "");
+        return DriverManager.getConnection("jdbc:mysql://sql2.freemysqlhosting.net/sql2358485?serverTimezone=UTC", "sql2358485", "jV2*gY2!");
     }
 
     // fill database with general morocco's data #TableName = Maroc#
     private static void insertDatabase(Connection conn, JSONArray js) throws SQLException, JSONException {
         Statement st = conn.createStatement();
         int len = js.length();
-        st.executeUpdate("DELETE From Maroc;");
-        st.executeUpdate("ALTER TABLE Maroc AUTO_INCREMENT = 1;");
+        st.executeUpdate("DELETE From maroc;");
+        st.executeUpdate("ALTER TABLE maroc AUTO_INCREMENT = 1;");
         for (int i = 0; i < len; i++) {
             JSONObject temp = js.getJSONObject(i).getJSONObject("attributes");
             long val = temp.getLong("Date");
             Date date = new Date(val);
             SimpleDateFormat df2 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
             String dateText = df2.format(date);
-            String sqlquery = "Insert Into Maroc (" +
+            String sqlquery = "Insert Into maroc (" +
                     "Date,confirmed,recovered,died,day_cases,day_recovered,day_deaths"
                     + ") values (\"" +
                     dateText + "\","
@@ -114,7 +115,7 @@ public class MainActivity {
         Date date = new Date();
         SimpleDateFormat df2 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         String dateText = df2.format(date);
-        ResultSet rs = st.executeQuery("SELECT COUNT(*)  as count from Maroc_regions where Date like \"" + dateText.substring(0, 10) + "%\";");
+        ResultSet rs = st.executeQuery("SELECT COUNT(*)  as count from maroc_regions where Date like \"" + dateText.substring(0, 10) + "%\";");
         rs.next();
         int count = rs.getInt(1);
         if (count >= 1) {
@@ -124,7 +125,7 @@ public class MainActivity {
         System.out.println(js.toString());
         for (int i = 0; i < len; i++) {
             JSONObject temp = js.getJSONObject(i).getJSONObject("attributes");
-            String sqlquery = "Insert Into Maroc_regions (" + "Date,region_name,confirmed,recovered,died"
+            String sqlquery = "Insert Into maroc_regions (" + "Date,region_name,confirmed,recovered,died"
                     + ") values (\"" +
                     dateText + "\",\""
                     + temp.getString("RegionFr") + "\","
