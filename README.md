@@ -40,7 +40,8 @@ CREATE TABLE IF NOT EXISTS maroc_regions (
 
 # How does it works: 
 Once you execute this code the first Table `Maroc` will be refilled with all the data from the beggining of covid in morocco (2020-03-02) and the second Table `Maroc_regions` will only be updated ( add new 12 lines to it ) if executed once everyday if the database is empty it will be filled with 12 rows representing the 12 regions of Morocco.
-
+## Clone Project : 
+`git clone https://github.com/Anass-ABEA/Covid-19-Database-Updater`
 # Problem with the code ? 
 feel free to create a [new issue HERE](https://github.com/Anass-ABEA/Covid-19-Database-Updater/issues) and i'll fix it ASAP.
 
