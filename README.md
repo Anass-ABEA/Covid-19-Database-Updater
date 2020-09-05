@@ -1,6 +1,5 @@
 # Covid-19-Database-Updater
 A Java made Project to filll a database with Moroccan Covid-19 Updates.
-Number of views : [![HitCount](http://hits.dwyl.com/Anass-ABEA/Covid-19-Database-Updater.svg)](http://hits.dwyl.com/Anass-ABEA/Covid-19-Database-Updater)
 
 # Steps to use this project:
 *I used Wamp for this example*
