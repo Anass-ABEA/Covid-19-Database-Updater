@@ -1,5 +1,6 @@
 # Covid-19-Database-Updater
 A Java made Project to fill a database with Moroccan Covid-19 Updates.
+
 *I stopped updating the database. If you need more info on how to update your database read the UPDATER section*
 
 # Steps to use this project:
@@ -56,4 +57,5 @@ To automatically update the database open [this path](https://github.com/Anass-A
 
 Right click on the .bat file and modify it, change the path for the database, wamp and the the .jar file. Once done open your task scheduler and schedule the execution of the batch file daily at your convenience. (DO NOT EXECUTE THE TASK AFTER 11:00 PM GMT Time because the data is updated at around 1AM and the code may update the data in the wrong time)
 
-# Contact: feel free to contact me on : annassabe@gmail.com or on what'sapp : +212 622 99 00 58
+# Contact: 
+feel free to contact me on : annassabe@gmail.com or on what'sapp : +212 622 99 00 58
