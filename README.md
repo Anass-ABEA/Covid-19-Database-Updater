@@ -1,13 +1,14 @@
 # Covid-19-Database-Updater
-A Java made Project to filll a database with Moroccan Covid-19 Updates.
+A Java made Project to fill a database with Moroccan Covid-19 Updates.
+*I stopped updating the database. If you need more info on how to update your database read the UPDATER section*
 
 # Steps to use this project:
 *I used Wamp for this example*
-## STEP 1: Creating a local database: 
+## STEP 1: Creating a local database:
 ```
 CREATE DATABASE covid;
 ```
-## STEP 2: Creating Database Tables: 
+## STEP 2: Creating Database Tables:
 **Table 1 : maroc**
 ```
 CREATE TABLE IF NOT EXISTS maroc (
@@ -39,13 +40,20 @@ CREATE TABLE IF NOT EXISTS maroc_regions (
 ## step 3: execute the jar file!
 [JAR FILE](https://github.com/Anass-ABEA/Covid-19-Database-Updater/tree/master/Execute)
 
-# How does it works: 
+# How does it works:
 Once you execute this code the first Table `Maroc` will be refilled with all the data from the beggining of covid in morocco (2020-03-02) and the second Table `Maroc_regions` will only be updated ( add new 12 lines to it ) if executed once everyday if the database is empty it will be filled with 12 rows representing the 12 regions of Morocco.
-## Clone Project : 
+## Clone Project :
 `git clone https://github.com/Anass-ABEA/Covid-19-Database-Updater`
-# Problem with the code ? 
+# Problem with the code ?
 feel free to create a [new issue HERE](https://github.com/Anass-ABEA/Covid-19-Database-Updater/issues) and i'll fix it ASAP.
 
 **NOTE:** feel free to change the code of `MainActivity.java` and share with me your results.
 
 **PS:**  Data is retreived from trusted sources [LINK TO THE SITE](http://www.geomatic.ma/fr/)
+
+# Updater
+To automatically update the database open [this path](https://github.com/Anass-ABEA/Covid-19-Database-Updater/tree/master/Execute) and download the two files.
+
+Right click on the .bat file and modify it, change the path for the database, wamp and the the .jar file. Once done open your task scheduler and schedule the execution of the batch file daily at your convenience. (DO NOT EXECUTE THE TASK AFTER 11:00 PM GMT Time because the data is updated at around 1AM and the code may update the data in the wrong time)
+
+# Contact: feel free to contact me on : annassabe@gmail.com or on what'sapp : +212 622 99 00 58
